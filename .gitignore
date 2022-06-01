@@ -3,3 +3,4 @@ output/
 artifacts/
 .ipynb_checkpoints
 .bin
+*.db
