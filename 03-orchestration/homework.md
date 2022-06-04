@@ -140,10 +140,10 @@ We could do something like `sorted(model_list, reverse=False)[0]` to get the fil
 
 What is the file size of the `DictVectorizer` that we trained when the `date` is 2021-08-15?
 
-* 15,600 bytes 
-* 16,600 bytes 
-* 17,600 bytes 
-* 18,600 bytes 
+* 13,000 bytes 
+* 23,000 bytes 
+* 33,000 bytes 
+* 43,000 bytes 
 
 You can bring up the Orion UI and see the work you've been doing. If you are using local Orion, you can start the server with:
 
@@ -163,10 +163,10 @@ For this exercise, use a `CronSchedule` when creating a Prefect deployment.
 
 What is the Cron expression to run a flow at 9 AM every 15th of the month?
 
-* * * 15 9 0
-* 9 15 * * *
-* 0 9 15 * *
-* 0 15 9 1 *
+* `* * 15 9 0`
+* `9 15 * * *`
+* `0 9 15 * *`
+* `0 15 9 1 *`
 
 Hint: there are many Cron to English tools. Try looking for one to help you.
 
