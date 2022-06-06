@@ -9,6 +9,9 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 from prefect import flow, task, get_run_logger
+from prefect.deployments import DeploymentSpec
+from prefect.orion.schemas.schedules import CronSchedule
+from prefect.flow_runners import SubprocessFlowRunner  # For running locally
 
 
 @task
@@ -128,5 +131,14 @@ def main(date = None):
 
 
 #main()
-main(date="2021-08-15")
+#main(date="2021-08-15")
 
+DeploymentSpec(
+    name="cron-schedule-deployment",
+    flow=main,
+    flow_runner=SubprocessFlowRunner(),
+    schedule=CronSchedule(
+        cron="0 9 15 * *",
+        timezone="America/New_York"),
+    tags=["homework"],
+)
