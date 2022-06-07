@@ -2,6 +2,17 @@ data/
 output/
 artifacts/
 .ipynb_checkpoints
+.bin
+*.db
+
+*.parquet
+*.html
+*.csv
+
+.venv
+venv
+.idea
+
 *.bin
 *.b
 *.db
